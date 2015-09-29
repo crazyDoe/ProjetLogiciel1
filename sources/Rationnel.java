@@ -20,6 +20,7 @@ public class Rationnel{
 		this.a = pA;
 		this.b = pB;
 		state = 3;
+		simplification();
 	}
 
 	public boolean estNul()
@@ -61,6 +62,32 @@ public class Rationnel{
 		return 0;
 
 	}
+
+	public int pgcd(int x,int y)
+	{
+
+	if(y == 0 )
+		return x;
+	else
+		return pgcd(y,x%y);
+	}
+
+
+	public void simplification()
+	{
+		int pgcd;
+		while(a > b)
+		{
+			n++;
+			a = a - b;
+		}
+		pgcd = pgcd(a,b);
+		a /= pgcd;
+		b /= pgcd;
+
+	}
+
+
 
 	public String toString()
 	{

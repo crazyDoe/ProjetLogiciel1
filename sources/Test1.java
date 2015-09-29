@@ -1,11 +1,19 @@
 public class Test1{
-	public static void main(String[] args) {
-		System.out.println(new Rationnel(3,4,5));
-		System.out.println(new Rationnel(5,4,3));
-		System.out.println(new Rationnel(-2,3));
-		System.out.println(new Rationnel(3,-2));
-		System.out.println(new Rationnel(3,6,-2));
-		System.out.println(new Rationnel(3));
-		System.out.println(new Rationnel(1,3));
+
+	public static int pgcd(int x,int y)
+	{
+
+	if(y == 0 )
+		return x;
+	else
+		return pgcd(y,x%y);
 	}
+
+
+
+	public static void main(String[] args) {
+		System.out.println(new Rationnel(0,40,24));
+
+			}
+
 }
